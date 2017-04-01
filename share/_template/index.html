@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../_libs/style.css">
+        <title>APP NTTDATA</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <a class="logo">digital entity</a>
+            <div class="ntt">
+                <a href="https://emea.nttdata.com/it/home/it/index.html" target="_blank">
+                    <img src="../_libs/logo_nttdata.png" />
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2 data-bind="text:title"></h2>
+            <div class="hr"></div>
+            <div class="app" data-bind="foreach: app">
+                <p>
+                    <a class="manifest" data-bind="attr: { href: (type=='ios') ? 'itms-services://?action=download-manifest&amp;url='+path : path }">
+                        <img data-bind="style:{ display:(type=='ios') ? 'inline' : 'none'}" src="../_libs/icon_ios.png"/>
+                        <img data-bind="style:{ display:(type=='android') ? 'inline' : 'none'}" src="../_libs/icon_android.png"/>
+                        <span data-bind="text: name"></span> v<span data-bind="text: version"></span>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <script src="../_libs/knockout-min.js" type="text/javascript"></script>
+        <script src="config.js" type="text/javascript"></script>
+    </body>
+</html>
