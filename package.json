@@ -1,5 +1,5 @@
 {
-  "name": "ntt-json-server",
+  "name": "json-server",
   "version": "1.0.0",
   "description": "Stubber of json",
   "main": "index.js",
